@@ -15,7 +15,7 @@ packages = get_requirements(file_path)
 for package in packages:
     try:
         version = importlib.metadata.version(package)
-        print(f"{package}== {version}")
+        print(f"{package}=={version}")
     except importlib.metadata.PackageNotFoundError:
         version = "not installed"
         print(f"{package} ({version})")
